@@ -1,0 +1,48 @@
+@mixin breakpoint($point) {
+
+  @if $point == vMobile {
+    /** Mobile **/
+    @media screen and (max-width: 480px) { @content; }
+  }
+
+  @if $point == hMobile {
+    /** Mobile **/
+    @media screen and (min-width: 480px) and (max-width: 599px) { @content; }
+  }
+
+  @else if $point == allTablet {
+    /** All Tablets **/
+    @media screen and (min-width: 600px) and (max-width: 1023px) { @content; }
+  }
+
+  @else if $point == vTablet {
+    /** Vertical Tablet **/
+    @media screen and (min-width: 600px) and (max-width: 767px) { @content; }
+  }
+
+  @else if $point == hTablet {
+    /** Horizontal Tablet **/
+    @media screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+
+  @else if $point == allDesktop {
+    /** All Desktops **/
+    @media screen and (min-width: 1024px) and (max-width: 1919px) { @content; }
+  }
+
+  @else if $point == desktop {
+    /** Desktop **/
+    @media screen and (min-width: 1024px) and (max-width: 1199px) { @content; }
+  }
+
+  @else if $point == largeDesktop {
+    /** Large Desktop **/
+    @media screen and (min-width: 1200px) and (max-width: 1919px)  { @content; }
+  }
+
+  @else if $point == kiosk {
+    /** Kiosk **/
+    @media screen and (min-width: 1920px)  { @content; }
+  }
+
+}
