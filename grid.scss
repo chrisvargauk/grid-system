@@ -1,6 +1,8 @@
 @import "breakpoints";
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,9 +33,13 @@ $pad: 20px;
 [class*='col-'] {
   float: left;
   padding-right: $pad;
+  padding-bottom: $pad;
   .grid &:last-of-type {
     padding-right: 0;
   }
+}
+.col-1-1 {
+  width: 100%;
 }
 .col-2-3 {
   width: 66.66%;
@@ -96,15 +102,5 @@ $pad: 20px;
   .col-1-8 {
     width: auto;
     float: none;
-  }
-}
-
-[class*='col-'] {
-  div {
-    background: lightgreen;
-    color: darkgreen;
-    font-weight: bold;
-    border: 1px solid white;
-    border-collapse: collapse;
   }
 }
